@@ -1,0 +1,24 @@
+<section class="list">
+  <div class="list__container">
+    <nav class="list__menu">
+      <ul class="menu__list">
+        <li>
+          <a routerLink=""
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}"
+          class="menu__link">All</a>
+        </li>
+        <li>
+          <a routerLink="/recommended"
+            routerLinkActive="active"
+            class="menu__link">Recommended</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="list__books">
+      <div *ngFor="let book of books">
+        <app-book-list-item [book]="book"></app-book-list-item>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,45 @@
+<section class="edit">
+    <div class="edit__container">
+        <div class="edit__form">
+            <div class="edit__header">
+                <h2 *ngIf="!isEdit">Add Book</h2>
+                <h2 *ngIf="isEdit">Edit Book</h2>
+                <button class="form__button" (click)="back()">Back</button>
+            </div>
+          <form class="form" [formGroup]="editForm" *ngIf="this.editForm">
+              <div class="form__table">
+                  <div class="form__column">
+                    <div [ngClass]="getClass(title)">
+                      <label>Title</label>
+                      <input type="text" placeholder="Input title" formControlName="title">
+                    </div>
+
+                    <div [ngClass]="getClass(cover)">
+                      <label>Cover</label>
+                      <input type="text" placeholder="Paste url" formControlName="cover">
+                    </div>
+
+                    <div [ngClass]="getClass(genre)">
+                      <label>Genre</label>
+                      <input type="text" placeholder="Input genre" formControlName="genre">
+                    </div>
+
+                    <div [ngClass]="getClass(author)">
+                      <label>Author</label>
+                      <input type="text" placeholder="Input author" formControlName="author">
+                    </div>
+                  </div>
+                  <div class="form-control content">
+                    <label>Content</label>
+                    <textarea placeholder="Input content" formControlName="content"></textarea>
+                  </div>
+              </div>
+              <div class="form__buttons">
+                <button class="form__button" *ngIf="!isEdit" (click)="add()">Add</button>
+                <button class="form__button" *ngIf="isEdit" (click)="add()">Edit</button>
+                <button class="form__button" (click)="clear()">Clear</button>
+              </div>
+          </form>
+        </div>
+    </div>
+</section>

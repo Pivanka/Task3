@@ -1,0 +1,35 @@
+<div class="details">
+  <div class="details__container">
+    <div class="details__title">
+      <h2>Details</h2>
+    </div>
+    <div class="details__main">
+      <div class="details__book">
+        <div class="book__left">
+          <img src={{book.cover}} alt="">
+          <div class="book__general">
+            <p>Rating: {{book.rating}}</p>
+            <p>Reviews: {{book.reviews.length}}</p>
+          </div>
+        </div>
+        <div class="book__right">
+          <div class="book__main">
+            <p class="book__title">{{book.title}}</p>
+            <p>{{book.author}}, {{book.genre}}</p>
+          </div>
+          <div class="book__content">
+            {{book.content}}
+          </div>
+        </div>
+      </div>
+      <div class="details__reviews">
+        <div *ngFor="let review of book.reviews">
+          <div class="details__review">
+            <h4>{{review.reviewer}}</h4>
+            <p>{{review.message}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

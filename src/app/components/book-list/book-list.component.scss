@@ -1,0 +1,35 @@
+.list{
+  &__container{
+    margin: 20px;
+    padding: 10px;
+    max-width: 1000px;
+  }
+  &__books{
+    height: 600px;
+    padding: 20px;
+    border: 1px solid #000000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 1em;
+    overflow: auto;
+  }
+}
+
+.menu__list {
+  display: flex;
+  li{
+    & a{
+      display: inline-block;
+      padding: 5px 30px;
+      border: 1px solid #000000;
+      border-bottom: none;
+      color: #000000;
+      font-size: 14px;
+    }
+    & .menu__link.active{
+      background-color: #000000;
+      color: white;
+    }
+  }
+}

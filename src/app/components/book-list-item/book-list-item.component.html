@@ -1,0 +1,26 @@
+<div class="item">
+  <div class="book__item">
+    <div class="book__cover">
+      <img src={{book.cover}} alt="">
+    </div>
+    <div class="book__main">
+        <div class="book__info">
+            <div class="book__title">
+              <h3>{{book.title}}</h3>
+            </div>
+            <div class="book__row">
+              <div class="book__rate">
+                Rating: {{book.rating}}
+              </div>
+              <div class="book__review">
+                Reviews: {{book.reviewsNumber}}
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="book__buttons">
+      <button (click)="editBook()">Edit</button>
+      <button (click)="openDetails()">Details</button>
+    </div>
+  </div>
+</div>

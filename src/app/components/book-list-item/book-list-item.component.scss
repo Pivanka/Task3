@@ -1,0 +1,58 @@
+.item{
+  max-width: 400px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+.book{
+  &__item {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e8f0ff;
+  }
+  &__cover {
+    & img{
+      width: 80px;
+      height: 120px;
+    }
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__main {
+    padding-left: 5px;
+  }
+  &__info {
+    font-size: 10px;
+  }
+  &__title {
+    padding: 5px 0px;
+    font-size: 20px;
+  }
+
+  &__rate {
+    padding-right: 15px;
+  }
+  &__review {
+  }
+  &__buttons{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    & button{
+      margin: 5px;
+      display: block;
+      width: 55px;
+      background-color: #2B8F78;
+      color: white;
+      padding: 10px;
+      border-radius: 25px;
+      font-size: 10px;
+        &:hover{
+            background-color: #206656;
+        }
+    }
+  }
+}
